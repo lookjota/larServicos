@@ -7,8 +7,8 @@ const Contact = () => {
   const [service, setService] = useState("");
   const [messageText, setMessageText] = useState("");
 
-  const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
 
   const message = `
     🏠 Lar & Soluções
