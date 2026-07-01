@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "../assets/head8.png";
 
 const Home = () => {
