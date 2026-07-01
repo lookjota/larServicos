@@ -1,4 +1,4 @@
-import Image from "../assets/head8.png";
+import Image from "../assets/head0.png";
 
 const Home = () => {
   return (
@@ -13,7 +13,7 @@ const Home = () => {
           </p> */}
 
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-            Seu lar merece um serviço à altura da sua{" "}
+            Seu amigo do lar para serviços feitos com{" "}
             <span className="text-sky-600">confiança</span>
           </h1>
 
