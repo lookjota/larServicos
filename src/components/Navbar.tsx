@@ -69,23 +69,25 @@ useEffect(() => {
           </a>
 
           {/* Desktop Menu */}
-          {menu.map((item) => (
-            <a
-              key={item.name}
-              href={item.link}
-              className="relative group text-gray-700"
-            >
-              {item.name}
+          <div className="hidden md:flex space-x-8 text-gray-700 font-medium">
+            {menu.map((item) => (
+              <a
+                key={item.name}
+                href={item.link}
+                className="relative group text-gray-700"
+              >
+                {item.name}
 
-              <span
-                className={`absolute left-0 -bottom-1 h-[2px] bg-sky-600 transition-all duration-300 ${
-                  active === item.link.replace('#', '')
-                    ? 'w-full'
-                    : 'w-0 group-hover:w-full'
-                }`}
-              />
-            </a>
-          ))}
+                <span
+                  className={`absolute left-0 -bottom-1 h-[2px] bg-sky-600 transition-all duration-300 ${
+                    active === item.link.replace('#', '')
+                      ? 'w-full'
+                      : 'w-0 group-hover:w-full'
+                  }`}
+                />
+              </a>
+            ))}
+          </div>
 
           {/* Login */}
           <button className="hidden md:block px-5 py-2 rounded-lg bg-sky-600 text-white font-medium hover:bg-sky-700 transition">
