@@ -11,31 +11,82 @@ const data = [
   {
     title: "Hidráulica",
     icon: Wrench,
-    items: ["Troca de torneiras", "Chuveiros", "Pequenos reparos hidráulicos"],
+    items: [
+      "Troca de torneiras", 
+      "Chuveiros", 
+      "Pequenos reparos hidráulicos",
+      "Reparo hidráulico",
+      "Troca de sifão",
+      "Reparo em vazamentos"
+    ],
     color: "text-blue-600",
   },
   {
     title: "Elétrica",
     icon: Plug,
-    items: ["Tomadas", "Interruptores", "Luminárias", "Ventiladores de teto"],
+    items: ["Eletricista",
+       "Eletricista Residencial",
+       "Luminárias", 
+       "Ventiladores de teto",
+       "Troca de tomadas",
+       "instalação de tomadas",
+       "Troca de interruptores",
+       "instalação de lustres",
+       "instalação de luminárias",
+       "troca de chuveiro"
+      ],
     color: "text-yellow-600",
   },
   {
     title: "Instalações",
     icon: Hammer,
-    items: ["Suportes para TV", "Prateleiras", "Quadros", "Cortinas"],
+    items: [
+      "Instalação suportes para TV", 
+      "Prateleiras", 
+      "Quadros", 
+      "Instalação de cortina",
+      "Instalação de persiana",
+      "Instalação de nichos",
+      "Instalação de espelhos"
+    ],
     color: "text-emerald-600",
   },
   {
     title: "Marcenaria / Montagem",
     icon: Sofa,
-    items: ["Montagem de móveis", "Portas", "Fechaduras"],
+    items: [
+      "Montagem de móveis", 
+      "Portas", 
+      "Fechaduras",
+      "Montagem de guarda-roupa",
+      "Montagem de painel",
+      "Montagem de rack",
+      "Montagem de estante"
+    ],
     color: "text-purple-600",
   },
   {
     title: "Manutenção",
     icon: ShieldCheck,
-    items: ["Manutenção preventiva residencial"],
+    items: [
+      "Manutenção preventiva residencial", 
+      "Marido de aluguel", 
+      "Manutenção residencial", 
+      "Pequenos reparos", 
+      "Instalação residencial", 
+      "Manutenção predial", 
+      "Reforma residencial"
+    ],
+    color: "text-slate-600",
+  },
+  {
+    title: "Pintura",
+    icon: ShieldCheck,
+    items: [
+      "Pintura residencial",
+      "Pintura de parede",
+      "Pintura de apartamentos"
+    ],
     color: "text-slate-600",
   },
 ];

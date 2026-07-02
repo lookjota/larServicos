@@ -53,70 +53,85 @@ const About = () => {
             <span>Preço justo e transparência</span>
           </li>
         </ul>
+        <section id="atendimento" className="py-20 bg-gray-50">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center mb-6">
+              Áreas de Atendimento
+            </h2>
+
+            <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+              O <strong>Amigo do Lar</strong> atende residências em diversas regiões do
+              Distrito Federal, realizando serviços de marido de aluguel em Brasília, 
+              Águas Claras, Taguatinga, Guará, Ceilândia, Samambaia e demais regiões do Distrito Federal. 
+              Nossa equipe executa instalações, pequenos reparos, serviços elétricos, hidráulicos e montagem de móveis com qualidade, 
+              pontualidade e garantia.
+            </p>
+
+                      <div className="flex flex-wrap gap-3">
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Taguatinga
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Riacho Fundo I
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Núcleo Bandeirante
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Candangolândia
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Águas Claras
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Guará
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Asa Sul
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Asa Norte
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Cruzeiro
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Sudoeste
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Noroeste
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Octogonal
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Lago Sul
+            </span>
+
+            <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
+              Lago Norte
+            </span>
+          </div>
+          </div>
+        </section>
 
         <div className="mt-10">
-  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-    Áreas de Atendimento
-  </h3>
 
-  <div className="flex flex-wrap gap-3">
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Taguatinga
-    </span>
 
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Riacho Fundo I
-    </span>
 
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Núcleo Bandeirante
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Candangolândia
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Águas Claras
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Guará
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Asa Sul
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Asa Norte
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Cruzeiro
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Sudoeste
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Noroeste
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Octogonal
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Lago Sul
-    </span>
-
-    <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">
-      Lago Norte
-    </span>
-  </div>
-</div>
+        </div>
 
         
       </div>

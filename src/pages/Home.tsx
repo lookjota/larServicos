@@ -17,10 +17,14 @@ const Home = () => {
             <span className="text-sky-600">confiança</span>
           </h1>
 
-          <p className="mt-6 text-lg text-slate-600 leading-relaxed">
-            Manutenção residencial com qualidade profissional, atendimento transparente e acabamento impecável.
-            Da instalação de equipamentos aos pequenos reparos, entregamos segurança, agilidade e excelência para cuidar do que realmente importa: o seu lar.
-          </p>
+          <h2 className="mt-6 text-lg text-slate-600 leading-relaxed">
+            
+Marido de Aluguel em Brasília para Reparos e Manutenção Residencial
+
+            
+Amigo do Lar | Manutenção Residencial com Qualidade e Confiança
+
+          </h2>
 
           {/* BOTÕES */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
