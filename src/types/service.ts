@@ -1,6 +1,14 @@
+export interface Service {
+  slug: string
+  title: string
+  category: string
 
+  shortDescription: string
+  description: string
 
-export interface service {
-  slug: string;
-  title: string;
+  icon: string
+  heroImage: string
+
+  items: string[]
+  benefits: string[]
 }
