@@ -31,3 +31,7 @@ export const servicesData: Service[] = [
     ]
   }
 ]
+
+export function getServiceBySlug(slug: string): Service | undefined {
+  return servicesData.find(service => service.slug === slug);
+}

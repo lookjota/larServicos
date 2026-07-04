@@ -1,32 +1,21 @@
 import './App.css'
-import Navbar from './components/Navbar'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import Feature from './components/Feature'
-import About from './components/About'
-import Contact from './components/Contact'
-import WhatsAppButton from './components/WhatsAppButton'
-import ServicosPremium from './components/ServicosPremium'
+import ServicePage from './pages/ServicePage'
 
 function App() {
 
   return (
-    <div className="px-4 md:px-16 pt-20 lg:px-32 ">
-      <Navbar/>
-      <section id="home" >
-        <Home/>  
-      </section>
-      <section id="servicos">
-      <Feature/>
-      </section>
-        <ServicosPremium/>
-      <section id="sobre" >
-        <About/>
-      </section>
-      <section id="contato" >
-        <Contact/>  
-      </section>
-      <WhatsAppButton/>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route
+          path="/servicos/:slug"
+          element={<ServicePage />}
+        />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
