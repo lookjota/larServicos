@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import { getServiceBySlug } from "../../data/servicesData";
+import { ServiceRepository } from "../../domain/repositories/ServiceRepository";
 
 export default function ServicePage() {
   const { slug } = useParams();
 
-  const service = getServiceBySlug(slug ?? "");
+  const service = 
+    ServiceRepository.getBySlug(slug ?? "");
 
   if (!service) {
     return (
