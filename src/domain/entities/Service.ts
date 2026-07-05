@@ -1,14 +1,55 @@
+import type { Seo } from "./Seo";
+import type { Hero } from "./Hero";
+import type { Benefit } from "./Benefit";
+import type { Faq } from "./Faq";
+import type { Cta } from "./Cta";
+
 export interface Service {
-  slug: string
-  title: string
-  category: string
 
-  shortDescription: string
-  description: string
+  /**
+   * Identificador único.
+   */
+  slug: string;
 
-  icon: string
-  heroImage: string
+  /**
+   * Nome do serviço.
+   */
+  title: string;
 
-  items: string[]
-  benefits: string[]
+  /**
+   * Cidade atendidas.
+   * (será usada futuramente)
+   */
+  cities?: string[];
+
+  /**
+   * SEO.
+   */
+  seo: Seo;
+
+  /**
+   * Hero da página.
+   */
+  hero: Hero;
+
+  /**
+   * Descrição longa.
+   */
+  description: string;
+
+  /**
+   * Benefícios.
+   */
+  benefits: Benefit[];
+
+  /**
+   * FAQ.
+   */
+  faq: Faq[];
+
+  /**
+   * CTA.
+   */
+  cta: Cta;
+
 }

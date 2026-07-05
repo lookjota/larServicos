@@ -1,25 +1,47 @@
-import { useParams } from "react-router-dom";
-import { ServiceRepository } from "../../domain/repositories/ServiceRepository";
+import type { ServicePageProps } from './type'
 
-export default function ServicePage() {
-  const { slug } = useParams();
+/**
+ * Página responsável apenas por apresentar
+ * um serviço.
+ *
+ * Ela não conhece Router.
+ * Ela não conhece Repository.
+ * Ela apenas renderiza.
+ */
+export default function ServicePage({
 
-  const service = 
-    ServiceRepository.getBySlug(slug ?? "");
+    service,
 
-  if (!service) {
+    citySlug
+
+}: ServicePageProps) {
+
     return (
-      <main className="max-w-6xl mx-auto py-20">
-        <h1>Serviço não encontrado</h1>
-      </main>
+
+        <main className="max-w-6xl mx-auto py-20">
+
+            <h1>
+
+                {service.title}
+
+            </h1>
+
+            <p>
+
+                {service.description}
+
+            </p>
+
+            <small>
+
+                Cidade:
+
+                {citySlug}
+
+            </small>
+
+        </main>
+
     );
-  }
 
-  return (
-    <main className="max-w-6xl mx-auto py-20">
-      <h1>{service.title}</h1>
-
-      <p>{service.description}</p>
-    </main>
-  );
 }

@@ -1,36 +1,66 @@
-import type { Service } from "../entities/Service"; 
+import type { Service } from "../entities/Service";
 
 export const servicesData: Service[] = [
   {
-    slug: "hidraulica",
+    slug: "eletricista",
 
-    title: "Serviços Hidráulicos",
+    title: "Eletricista Residencial",
 
-    category: "Hidráulica",
+    seo: {
+      title: "Eletricista em Brasília | Amigo do Lar",
+      description:
+        "Instalações elétricas, troca de tomadas, interruptores, luminárias e pequenos reparos residenciais.",
+      keywords: [
+        "eletricista",
+        "eletricista em brasília",
+        "marido de aluguel",
+      ],
+    },
 
-    shortDescription:
-      "Pequenos reparos hidráulicos realizados com segurança e qualidade.",
+    hero: {
+      title: "Serviços Elétricos com Segurança",
+      subtitle:
+        "Atendimento rápido, profissional e com acabamento de qualidade.",
+      image: "/images/services/eletricista/hero.webp",
+      primaryButton: "Solicitar orçamento",
+    },
 
     description:
-      "Executamos instalação e manutenção hidráulica residencial, incluindo torneiras, sifões, registros e vazamentos.",
-
-    icon: "wrench",
-
-    heroImage: "/images/services/hidraulica.jpg",
-
-    items: [
-      "Troca de torneiras",
-      "Troca de sifão",
-      "Instalação de chuveiro"
-    ],
+      "Realizamos serviços elétricos residenciais com foco em segurança, qualidade e organização.",
 
     benefits: [
-      "Orçamento gratuito",
-      "Atendimento rápido",
-      "Serviço com garantia"
-    ]
-  }
-]
+      {
+        title: "Atendimento Rápido",
+        description: "Agilidade no atendimento.",
+        icon: "Clock",
+      },
+      {
+        title: "Segurança",
+        description: "Instalações seguindo boas práticas.",
+        icon: "Shield",
+      },
+    ],
+
+    faq: [
+      {
+        question: "Vocês trocam chuveiro?",
+        answer: "Sim, realizamos instalação e substituição.",
+      },
+      {
+        question: "Instalam luminárias?",
+        answer: "Sim, incluindo lustres e pendentes.",
+      },
+    ],
+
+    cta: {
+      title: "Solicite um orçamento",
+      description: "Atendimento sem compromisso.",
+      buttonText: "Falar no WhatsApp",
+      whatsappMessage:
+        "Olá! Gostaria de um orçamento para serviços elétricos.",
+    },
+  },
+];
 
 export function getServiceBySlug(slug: string): Service | undefined {
   return servicesData.find(service => service.slug === slug);
