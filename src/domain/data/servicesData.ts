@@ -53,11 +53,13 @@ export const servicesData: Service[] = [
     ],
 
     cta: {
-      title: "Solicite um orçamento",
-      description: "Atendimento sem compromisso.",
-      buttonText: "Falar no WhatsApp",
-      whatsappMessage:
-        "Olá! Gostaria de um orçamento para serviços elétricos.",
+      title: "Precisa de um eletricista em Brasília?",
+      description:
+          "Solicite um orçamento rápido pelo WhatsApp.",
+      buttonText:
+          "Falar pelo WhatsApp",
+      buttonLink:
+          "https://wa.me/5561995646646"
     },
   },
 ];

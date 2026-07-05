@@ -1,38 +1,17 @@
-import type { ServicePageProps } from './type'
-import HeroSection from '../../components/service/HeroSection';
-import BenefitsSection from '../../components/service/BenefitsSection';
-import FaqSection from '../../components/service/FaqSection';
+import PageRenderer from "../../components/PageRenderer";
 
+import type { ServicePageProps } from "./type"
 
-/**
- * Página responsável apenas por apresentar
- * um serviço.
- *
- * Ela não conhece Router.
- * Ela não conhece Repository.
- * Ela apenas renderiza.
- */
 export default function ServicePage({
-
-    service,
-
-    citySlug
-
+  service,
 }: ServicePageProps) {
 
-    return (
+  return (
 
-      <>
-        <HeroSection
-          hero={service.hero}
-        />
-        <BenefitsSection
-          benefits={service.benefits}
-        />
-        <FaqSection 
-          faq={service.faq}
-        />
-      </>
-    );
+    <PageRenderer
+      service={service}
+    />
+
+  );
 
 }
