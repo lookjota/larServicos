@@ -1,4 +1,6 @@
 import type { ServicePageProps } from './type'
+import HeroSection from '../../components/service/HeroSection';
+
 
 /**
  * Página responsável apenas por apresentar
@@ -18,30 +20,11 @@ export default function ServicePage({
 
     return (
 
-        <main className="max-w-6xl mx-auto py-20">
-
-            <h1>
-
-                {service.title}
-
-            </h1>
-
-            <p>
-
-                {service.description}
-
-            </p>
-
-            <small>
-
-                Cidade:
-
-                {citySlug}
-
-            </small>
-
-        </main>
-
+      <>
+        <HeroSection
+          hero={service.hero}
+        />
+      </>
     );
 
 }
