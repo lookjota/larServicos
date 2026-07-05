@@ -1,5 +1,5 @@
 import { servicesData } from "../data/servicesData";
-import type { Service } from "../types/service";
+import type { Service } from "../entities/Service";
 
 export class ServiceRepository {
   static getAll(): Service[] {
