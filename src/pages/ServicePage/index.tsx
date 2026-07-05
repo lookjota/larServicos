@@ -1,5 +1,7 @@
 import type { ServicePageProps } from './type'
 import HeroSection from '../../components/service/HeroSection';
+import BenefitsSection from '../../components/service/BenefitsSection';
+import FaqSection from '../../components/service/FaqSection';
 
 
 /**
@@ -23,6 +25,12 @@ export default function ServicePage({
       <>
         <HeroSection
           hero={service.hero}
+        />
+        <BenefitsSection
+          benefits={service.benefits}
+        />
+        <FaqSection 
+          faq={service.faq}
         />
       </>
     );
