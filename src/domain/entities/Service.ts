@@ -1,13 +1,22 @@
-import type { Seo } from "./Seo";
-import type { Hero } from "./Hero";
-import type { Benefit } from "./Benefit";
-import type { Faq } from "./Faq";
-import type { Cta } from "./Cta";
+import type { PageSection } from "./PageSection";
 
+/**
+ * Service
+ *
+ * Representa um serviço oferecido pela empresa.
+ *
+ * Observe que ele não conhece mais Hero,
+ * FAQ ou Benefits individualmente.
+ *
+ * Agora ele conhece apenas uma coleção
+ * ordenada de PageSection.
+ *
+ * Isso torna o domínio muito mais flexível.
+ */
 export interface Service {
 
   /**
-   * Identificador único.
+   * Identificador da URL.
    */
   slug: string;
 
@@ -17,39 +26,8 @@ export interface Service {
   title: string;
 
   /**
-   * Cidade atendidas.
-   * (será usada futuramente)
+   * Estrutura completa da página.
    */
-  cities?: string[];
-
-  /**
-   * SEO.
-   */
-  seo: Seo;
-
-  /**
-   * Hero da página.
-   */
-  hero: Hero;
-
-  /**
-   * Descrição longa.
-   */
-  description: string;
-
-  /**
-   * Benefícios.
-   */
-  benefits: Benefit[];
-
-  /**
-   * FAQ.
-   */
-  faq: Faq[];
-
-  /**
-   * CTA.
-   */
-  cta: Cta;
+  sections: PageSection[];
 
 }
