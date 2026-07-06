@@ -1,28 +1,34 @@
-
 import type { PageSectionType } from "./PageSectionType";
+
 /**
- * PageSection
+ * Representa qualquer bloco da página.
  *
- * Representa qualquer bloco
- * existente dentro de uma página.
+ * O Render Engine não sabe
+ * o conteúdo do bloco.
  *
- * Hero
- * FAQ
- * CTA
- * Gallery
- * Benefits
- * Testimonials
+ * Apenas sabe:
+ *
+ * - qual o tipo
+ * - quais dados entregar
  */
 export interface PageSection {
 
     /**
      * Identificador único.
      */
-    id: string;
+    id:string;
 
     /**
-     * Tipo do bloco.
+     * Tipo da seção.
      */
-    type: PageSectionType;
+    type:PageSectionType;
+
+    /**
+     * Dados específicos.
+     *
+     * Cada componente saberá
+     * interpretar esses dados.
+     */
+    data:unknown;
 
 }
