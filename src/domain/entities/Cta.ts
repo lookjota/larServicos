@@ -1,11 +1,34 @@
+/**
+ * CTA (Call To Action)
+ *
+ * Representa a principal ação
+ * que desejamos que o usuário execute.
+ */
 export interface Cta {
 
-    title: string;
+  /**
+   * Título da seção.
+   */
+  title: string;
 
-    description: string;
+  /**
+   * Texto de apoio.
+   */
+  description: string;
 
-    buttonText: string;
+  /**
+   * Texto do botão.
+   */
+  buttonText: string;
 
-    whatsappMessage: string;
+  /**
+   * Destino da ação.
+   *
+   * Pode ser:
+   * - WhatsApp
+   * - Telefone
+   * - Formulário
+   */
+  buttonLink: string;
 
 }
