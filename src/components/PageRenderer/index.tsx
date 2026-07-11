@@ -1,6 +1,6 @@
-import { pageSectionRegistry } from "../../core/registry/pageSectionRegistry";
 
 import type { PageSection } from "../../domain/entities/PageSection";
+import SectionRenderer from "../SectionRenderer";
 
 /**
  * Propriedades recebidas pelo PageRenderer.
@@ -30,19 +30,17 @@ export default function PageRenderer({
 }: PageRendererProps) {
     return (
         <>
-            {sections.map((section) => {
-                const Component =
-                    pageSectionRegistry[section.type];
-                if (!Component) {
-                    return null;
-                }
-                return (
-                    <Component
-                        key={section.id}
-                        section={section}
-                    />
-                );
-            })}
+            {sections.map(section => (
+
+                <SectionRenderer
+
+                    key={section.id}
+
+                    section={section}
+
+                />
+
+            ))}
         </>
     );
 }
