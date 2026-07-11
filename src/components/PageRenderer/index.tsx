@@ -1,18 +1,13 @@
-// Componentes responsáveis por renderizar
-// cada parte da página.
-import HeroSection from "../service/HeroSection";
-import BenefitsSection from "../service/BenefitsSection";
-import FaqSection from "../service/FaqSection";
-import CtaSection from "../service/CtaSection";
+import { pageSectionRegistry } from "../../core/registry/pageSectionRegistry";
 
-// Entidade do domínio.
-import type { Service } from "../../domain/entities/Service";
+import type { PageSection } from "../../domain/entities/PageSection";
 
 /**
  * Propriedades recebidas pelo PageRenderer.
  */
 interface PageRendererProps {
-  service: Service;
+  sections: PageSection[];
+
 }
 
 /**
@@ -31,17 +26,23 @@ interface PageRendererProps {
  * para o Render Engine orientado a dados.
  */
 export default function PageRenderer({
-  service,
+    sections,
 }: PageRendererProps) {
-  return (
-    <>
-      <HeroSection hero={service.hero} />
-
-      <BenefitsSection benefits={service.benefits} />
-
-      <FaqSection faq={service.faq} />
-
-      <CtaSection cta={service.cta} />
-    </>
-  );
+    return (
+        <>
+            {sections.map((section) => {
+                const Component =
+                    pageSectionRegistry[section.type];
+                if (!Component) {
+                    return null;
+                }
+                return (
+                    <Component
+                        key={section.id}
+                        section={section}
+                    />
+                );
+            })}
+        </>
+    );
 }

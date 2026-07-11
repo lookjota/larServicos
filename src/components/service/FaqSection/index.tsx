@@ -2,6 +2,7 @@
 // Observe que o componente conhece somente o que precisa.
 // Ele não conhece Service, Repository nem Router.
 import type { Faq } from "../../../domain/entities/Faq";
+import type { PageSection } from "../../../domain/entities/PageSection";
 
 /**
  * Define quais informações
@@ -10,7 +11,7 @@ import type { Faq } from "../../../domain/entities/Faq";
  * Apenas uma lista de perguntas.
  */
 interface FaqSectionProps {
-  faq: Faq[];
+  section: PageSection;
 }
 
 /**
@@ -22,8 +23,10 @@ interface FaqSectionProps {
  * relacionadas ao serviço.
  */
 export default function FaqSection({
-  faq,
+  section,
 }: FaqSectionProps) {
+
+  const faq = section.data as Faq[];
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">

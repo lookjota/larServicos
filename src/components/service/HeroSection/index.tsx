@@ -1,4 +1,5 @@
 import type { Hero } from "../../../domain/entities/Hero";
+import type { PageSection } from "../../../domain/entities/PageSection";
 
 /**
  * HeroSection
@@ -8,12 +9,14 @@ import type { Hero } from "../../../domain/entities/Hero";
  * o Hero da página.
  */
 interface HeroSectionProps {
-  hero: Hero;
+  section: PageSection;
 }
 
 export default function HeroSection({
-  hero,
+  section,
 }: HeroSectionProps) {
+
+  const hero = section.data as Hero;
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-6xl mx-auto px-6">

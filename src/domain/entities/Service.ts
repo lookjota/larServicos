@@ -1,22 +1,26 @@
+import type { Seo } from "./Seo";
 import type { PageSection } from "./PageSection";
 
 /**
  * Service
  *
- * Representa um serviço oferecido pela empresa.
+ * Representa um serviço da empresa.
  *
- * Observe que ele não conhece mais Hero,
- * FAQ ou Benefits individualmente.
+ * Observe que este objeto possui dois grupos
+ * de informações:
  *
- * Agora ele conhece apenas uma coleção
- * ordenada de PageSection.
+ * 1) Metadados do domínio.
  *
- * Isso torna o domínio muito mais flexível.
+ * 2) Estrutura visual da página.
  */
 export interface Service {
 
   /**
-   * Identificador da URL.
+   * Identificador único utilizado na URL.
+   *
+   * Exemplo:
+   *
+   * /eletricista
    */
   slug: string;
 
@@ -26,7 +30,20 @@ export interface Service {
   title: string;
 
   /**
-   * Estrutura completa da página.
+   * Informações utilizadas pelo SEO.
+   */
+  seo: Seo;
+
+  /**
+   * Pequena descrição do serviço.
+   *
+   * Essa informação pertence ao domínio,
+   * não à renderização.
+   */
+  description: string;
+
+  /**
+   * Estrutura visual completa da página.
    */
   sections: PageSection[];
 

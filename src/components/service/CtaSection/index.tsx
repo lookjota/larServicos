@@ -1,7 +1,9 @@
 import type { Cta } from "../../../domain/entities/Cta";
+import type { PageSection } from "../../../domain/entities/PageSection";
+
 
 interface CtaSectionProps {
-  cta: Cta;
+  section: PageSection;
 }
 
 /**
@@ -11,8 +13,10 @@ interface CtaSectionProps {
  * a principal ação da página.
  */
 export default function CtaSection({
-  cta,
+  section,
 }: CtaSectionProps) {
+
+  const cta = section.data as Cta;
   return (
     <section className="py-20 bg-sky-600 text-white">
       <div className="max-w-5xl mx-auto px-6 text-center">
