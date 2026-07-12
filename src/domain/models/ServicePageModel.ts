@@ -2,12 +2,28 @@ import { PageSectionType } from "../entities/PageSectionType";
 
 export const ServicePageModel = [
 
-    PageSectionType.HERO,
+    {
+        type: PageSectionType.HERO,
+        required: true,
+        order: 1,
+    },
 
-    PageSectionType.BENEFITS,
+    {
+        type: PageSectionType.BENEFITS,
+        required: true,
+        order: 2,
+    },
 
-    PageSectionType.FAQ,
+    {
+        type: PageSectionType.FAQ,
+        required: false,
+        order: 3,
+    },
 
-    PageSectionType.CTA,
+    {
+        type: PageSectionType.CTA,
+        required: true,
+        order: 4,
+    },
 
 ];
