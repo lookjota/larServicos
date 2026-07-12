@@ -15,6 +15,9 @@
  * - Página de Serviço
  * - Página de Cidade
  */
+import type { Seo } from "./Seo";
+import type { PageSection } from "./PageSection";
+
 export interface Page {
 
     /**
@@ -28,9 +31,13 @@ export interface Page {
     title: string;
 
     /**
-     * Seções que compõem
-     * esta página.
+     * Informações de SEO.
      */
-    sections: string[];
+    seo: Seo;
+
+    /**
+     * Estrutura visual completa.
+     */
+    sections: PageSection[];
 
 }
