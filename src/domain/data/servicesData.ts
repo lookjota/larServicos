@@ -1,67 +1,74 @@
+import { PageSectionType } from "../entities/PageSectionType";
 import type { Service } from "../entities/Service";
 
 export const servicesData: Service[] = [
   {
-    slug: "eletricista",
+  slug: "eletricista",
 
-    title: "Eletricista Residencial",
+  title: "Eletricista Residencial",
 
-    seo: {
-      title: "Eletricista em Brasília | Amigo do Lar",
-      description:
-        "Instalações elétricas, troca de tomadas, interruptores, luminárias e pequenos reparos residenciais.",
-      keywords: [
-        "eletricista",
-        "eletricista em brasília",
-        "marido de aluguel",
+  seo: {
+    title: "Eletricista em Brasília | Amigo do Lar",
+    description:
+      "Instalações elétricas, troca de tomadas...",
+    keywords: [
+      "eletricista",
+      "eletricista em brasília",
+      "marido de aluguel",
+    ],
+  },
+
+  description:
+    "Realizamos serviços elétricos residenciais.",
+
+  sections: [
+    {
+      id: "hero",
+      type: PageSectionType.HERO,
+      data: {
+        title: "Serviços Elétricos com Segurança",
+        subtitle:
+          "Atendimento rápido...",
+        image: "/images/services/eletricista/hero.webp",
+        primaryButton: "Solicitar orçamento",
+      },
+    },
+
+    {
+      id: "benefits",
+      type: PageSectionType.BENEFITS,
+      data: [
+        {
+          title: "Atendimento Rápido",
+          description: "Agilidade...",
+          icon: "Clock",
+        },
       ],
     },
 
-    hero: {
-      title: "Serviços Elétricos com Segurança",
-      subtitle:
-        "Atendimento rápido, profissional e com acabamento de qualidade.",
-      image: "/images/services/eletricista/hero.webp",
-      primaryButton: "Solicitar orçamento",
+    {
+      id: "faq",
+      type: PageSectionType.FAQ,
+      data: [
+        {
+          question: "Trocam chuveiro?",
+          answer: "Sim.",
+        },
+      ],
     },
 
-    description:
-      "Realizamos serviços elétricos residenciais com foco em segurança, qualidade e organização.",
-
-    benefits: [
-      {
-        title: "Atendimento Rápido",
-        description: "Agilidade no atendimento.",
-        icon: "Clock",
+    {
+      id: "cta",
+      type: PageSectionType.CTA,
+      data: {
+        title: "Precisa de um eletricista?",
+        description: "Solicite um orçamento.",
+        buttonText: "WhatsApp",
+        buttonLink: "https://wa.me/...",
       },
-      {
-        title: "Segurança",
-        description: "Instalações seguindo boas práticas.",
-        icon: "Shield",
-      },
-    ],
-
-    faq: [
-      {
-        question: "Vocês trocam chuveiro?",
-        answer: "Sim, realizamos instalação e substituição.",
-      },
-      {
-        question: "Instalam luminárias?",
-        answer: "Sim, incluindo lustres e pendentes.",
-      },
-    ],
-
-    cta: {
-      title: "Precisa de um eletricista em Brasília?",
-      description:
-          "Solicite um orçamento rápido pelo WhatsApp.",
-      buttonText:
-          "Falar pelo WhatsApp",
-      buttonLink:
-          "https://wa.me/5561995646646"
     },
-  },
+  ],
+}
 ];
 
 export function getServiceBySlug(slug: string): Service | undefined {
