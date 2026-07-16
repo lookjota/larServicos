@@ -14,16 +14,21 @@ interface PageRendererProps {
  * PageRenderer
  *
  * Responsabilidade:
- * Receber um Service
- * e renderizar todas as seções da página.
  *
- * Neste momento da arquitetura,
- * ele ainda conhece explicitamente
- * Hero, Benefits, FAQ e CTA.
+ * Orquestrar a renderização de uma página.
  *
- * Isso será removido futuramente,
- * quando concluirmos a migração
- * para o Render Engine orientado a dados.
+ * Ele recebe uma coleção de PageSection
+ * e delega a renderização de cada seção
+ * ao SectionRenderer.
+ *
+ * Não conhece componentes específicos,
+ * não conhece Hero,
+ * FAQ,
+ * CTA,
+ * nem qualquer outro tipo de seção.
+ *
+ * Sua responsabilidade é exclusivamente
+ * coordenar a renderização da página.
  */
 export default function PageRenderer({
     sections,
